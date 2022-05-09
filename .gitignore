@@ -5,3 +5,4 @@ P.code-workspace
 tools.ipynb
 *.jpg
 val*
+train*
