@@ -6,5 +6,5 @@ tools.ipynb
 *.jpg
 val*
 train*
-*.h5
+modelo_train.h5
 .ipynb_checkpoints
