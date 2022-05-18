@@ -7,3 +7,4 @@ tools.ipynb
 val*
 train*
 *.h5
+.ipynb_checkpoints
