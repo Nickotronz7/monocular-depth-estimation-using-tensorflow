@@ -1,2 +1,12 @@
-*.tflite
+nyudepthv2
+nyudepthv2.tar.gz
+IADef copy.ipynb
+P.code-workspace
+tools.ipynb
+*.jpg
+val*
+train*
 *.h5
+.ipynb_checkpoints
+.meta*
+f407-*
