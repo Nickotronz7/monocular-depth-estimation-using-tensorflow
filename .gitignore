@@ -11,3 +11,4 @@ train*
 .meta*
 f407-*
 my_model.tflite
+model_entrenado.h5
