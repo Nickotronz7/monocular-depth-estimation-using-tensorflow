@@ -10,3 +10,4 @@ modelo_train.h5
 .ipynb_checkpoints
 .meta*
 f407-*
+model_entrenado.h5
