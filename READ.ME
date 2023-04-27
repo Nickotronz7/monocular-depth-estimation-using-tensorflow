@@ -1,0 +1,16 @@
+
+sudo make -C tensorflow/lite/tools/pip_package docker-build TENSORFLOW_TARGET=aarch64 PYTHON_VERSION=3.9
+
+Output can be found here:
++ find /tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.9/dist
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.9/dist
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.9/dist/tflite_runtime-2.13.0-cp39-cp39-linux_armv6l.whl
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.9/dist/tflite-runtime-2.13.0.linux-armv6l.tar.gz
++ [[ '' != \y ]]
++ exit 0
+
+Output can be found here:
++ find /tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.8/dist
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.8/dist
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.8/dist/tflite-runtime-2.13.0.linux-armv6l.tar.gz
+/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3.8/dist/tflite_runtime-2.13.0-cp38-cp38-linux_armv6l.whl

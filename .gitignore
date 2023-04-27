@@ -10,3 +10,4 @@ train*
 .ipynb_checkpoints
 .meta*
 f407-*
+my_model.tflite
