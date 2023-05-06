@@ -1,0 +1,32 @@
+4.3858976 took 0.2724618911743164
+Filename: /home/nicko/tfg_nick/runAI.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     8     36.4 MiB     36.4 MiB           1   @memory_profiler.profile
+     9                                         def runAI():
+    10                                             # load the model
+    11     37.5 MiB      1.1 MiB           1       interpreter = Interpreter(model_path="/home/nicko/tfg_nick/my_model.tflite")
+    12    238.7 MiB    201.2 MiB           1       interpreter.allocate_tensors()
+    13                                         
+    14    238.7 MiB      0.0 MiB           1       input_details = interpreter.get_input_details()
+    15    238.7 MiB      0.0 MiB           1       output_details = interpreter.get_output_details()
+    16                                         
+    17                                             # print(output_details[0]['shape'])
+    18                                         
+    19    239.6 MiB      0.9 MiB           1       image = Image.open("/home/nicko/tfg_nick/pics/10.png")
+    20    240.0 MiB      0.4 MiB           1       image = image.resize((256,256))
+    21    241.1 MiB      1.0 MiB           1       image = np.array(image, dtype=np.float32)
+    22    241.1 MiB      0.0 MiB           1       image = np.expand_dims(image, axis=0)
+    23                                         
+    24    241.8 MiB      0.8 MiB           1       interpreter.set_tensor(input_details[0]['index'], image)
+    25                                             
+    26                                             #realiza la prediccion
+    27    241.8 MiB      0.0 MiB           1       start = time.time()
+    28    257.7 MiB     15.8 MiB           1       interpreter.invoke()
+    29    257.7 MiB      0.0 MiB           1       end = time.time()
+    30                                         
+    31    257.7 MiB      0.0 MiB           1       output_data = interpreter.get_tensor(output_details[0]['index'])
+    32    257.7 MiB      0.0 MiB           1       print(str(output_data[0][0]) + ' took ' + str(end-start))
+
+
